@@ -1,0 +1,20 @@
+Rockabilly Project :
+Suivi d'activités
+---------------------
+
+
+- Gestion de contenu - Moteur de CMS à mettre en place
+	
+	12/03/08 : Commencement du commencement :)
+		* !! On part sur une sauvegarde des informations dans des fichiers, mais à terme on pourrait utiliser une base de données (MySQL, PostGres ?? On s'en fout : du SQL :)
+
+		
+
+---
+
+- Gestion des médias - Comment traiter et afficher les médias ?
+
+---
+
+- Gestion des thèmes
+
