@@ -34,15 +34,21 @@ class Rockabilly {
 
 	/**
 	 * Render a form of type $type
+	 * @param String $action
 	 * @param String $type Form type
 	 * @return String Form fragment
 	 */
-	public function renderForm($type = RB_DEFAULT_FORM_TYPE) {
+	public function renderForm($action, $type = RB_DEFAULT_FORM_TYPE) {
 		$class = 'Rb' . $type . 'Form';
 		require_once('forms/' . $class . '.class.php');
 		$form = new $class();
 
-		return $form->render();
+		echo '<form method="post" action="' . $action . '">';
+		$form->render();
+		echo '<br />';
+		echo '<input type="submit" />';
+		echo '</form>';
+
 	}
 
 	/**
@@ -50,13 +56,14 @@ class Rockabilly {
 	 * @param String $type Form type
 	 */
 	public function bindForm($type = RB_DEFAULT_FORM_TYPE) {
+		$class = 'Rb' . $type . 'Form';
+		require_once('forms/' . $class . '.class.php');
+		$form = new $class();
+
 		$content = $form->bind($_POST);
-		
-		$categorie = 'default';
+		$category = 'default';
 
-		
-
-		$this->storage->saveArticle($categorie, $content);
+		$this->storage->saveArticle($category, $content);
 	}
 
 	/** Return storage */

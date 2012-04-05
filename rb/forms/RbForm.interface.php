@@ -3,8 +3,7 @@
 interface RbForm {
 
 	/**
-	 * Return the Form HTML fragment
-	 * @return Form HTML fragment
+	 * Echo the HTML form fragment
 	 */
 	function render();
 

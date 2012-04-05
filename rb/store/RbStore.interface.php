@@ -3,8 +3,8 @@ interface RbStore {
 
 	/**
 	 * Get an Article
-	 * @param: 	Id String
-	 *			Category String
+	 * @param $id String
+	 * @param $category String
 	 */
 	public function getArticle($category, $id);
 	
